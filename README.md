@@ -33,6 +33,18 @@ For example how powerful a machine fow we need to conduct a task. Do we need cer
 Monoliths - not flexible/or robust
 
 - Risk register:
-Highlights risks in system. Outlines potential damagesa, chance of occurence and risk to business. 
+Highlights risks in system. Outlines potential damages, chance of occurence and risk to business. 
 
 
+## Development environments
+- Space with all the tools and configurations to run and test programs.
+
+- Increases dev team collaboration.
+
+What makes a good dev environment?
+- User friendly, fast and robust
+- Should be easy to update
+- It should match the production environment as closely as possible
+- Acessibility. It should be the same for everyone, everywhere. 
+- It should support one application - app1 requires version 1.1 - app 2 needs 1.4 
+or app1 conflicts with a program app2 needs.
