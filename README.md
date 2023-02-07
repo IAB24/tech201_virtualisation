@@ -48,3 +48,20 @@ What makes a good dev environment?
 - Acessibility. It should be the same for everyone, everywhere. 
 - It should support one application - app1 requires version 1.1 - app 2 needs 1.4 
 or app1 conflicts with a program app2 needs.
+
+
+- Virtualisation allows you to set up a dev environment equal for everyone using VMs.
+
+How to set up ruby:
+https://rubyinstaller.org/downloads/
+
+How to set up virtual box:
+https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
+
+How to set up vagrant:
+https://www.vagrantup.com/
+
+$ vagrant init ubuntu/xenia164
+- initialise new config file in this folder
+
+Windows hypervisor on
