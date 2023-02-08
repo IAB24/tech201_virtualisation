@@ -65,3 +65,54 @@ $ vagrant init ubuntu/xenia164
 - initialise new config file in this folder
 
 Windows hypervisor on
+
+
+Create a directory for your project and navigate to it in the terminal.
+
+Initialize the project with a specific base image by running the command vagrant init ubuntu/xenial64. This will create a Vagrantfile in the directory, which is used to configure your virtual environment.
+
+Vagrant file has this code in it in ruby. You will need to delete the comments.
+
+```
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ubuntu/xenial64"
+
+
+end
+```
+
+Start the virtual machine by running the command vagrant up.
+
+Connect to the virtual machine by running vagrant ssh.
+
+ls -a shows hidden files 
+
+sudo apt get update -y
+
+sudo apt-get install nginx -y
+
+sudo systemctl start nginx
+
+sudo systemctl status nginx
+
+```
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.network "private_network", ip: "192.168.10.100"
+
+
+end
+```
+exit using ctrl c
+
+vagrant reload
+
+type.ip address into browser and you can see these changes have been made.
+
+
+
+
+
+
