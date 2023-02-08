@@ -111,8 +111,48 @@ vagrant reload
 
 type.ip address into browser and you can see these changes have been made.
 
+VMs - emulating an operating system within your own OS
 
+## Advanced Bash
 
+uname - OS system
 
+- Flags (-y, -a, -s, -r etc.) modify operations. also called options
 
+- cd change directory
+/ root, ~ home
+
+ls list files, tells you where you are.
+
+relative path where is it from me
+/Folder1/Folder2
+
+absolute path where is it from root
+C:\users\username\Documents\myfile.txt
+https://www.mysite.com/myfolder/subfolder/sub/sub2page1.html
+
+touch - create file
+touch emptyfile.txt
+
+nano makes file/opens editor in linux
+cat- prints changes in nano
+
+mkdir new file
+cp copy contents of file into another file
+
+r - recursive, everything in folder
+rsync synchronise files
+mv move files
+move file several files down ex mv myfile.txt/../../exfile.txt
+you can rename files too
+my_file2.txt
+
+rm- remove files - no check so be careful (rm-rf deletes everything)
+man ls
+man -k change (keyword) brings up  docs with keyword in it
+grep test find where keywords are in files
+grep test * -R recursive search
+wildcards are used to match multiple filenames or pattern of characters, such as * (matches any number of characters) or ? (matches exactly one character). They are used in bash commands, such as ls or rm, to operate on multiple files at once.
+
+VM terminal is not colourful unlike PC
 
