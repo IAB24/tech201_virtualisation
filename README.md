@@ -113,46 +113,127 @@ type.ip address into browser and you can see these changes have been made.
 
 VMs - emulating an operating system within your own OS
 
-## Advanced Bash
+
 
 uname - OS system
 
-- Flags (-y, -a, -s, -r etc.) modify operations. also called options
 
-- cd change directory
-/ root, ~ home
+### Advanced Bash Commands
 
-ls list files, tells you where you are.
+- Flags: Used in commands to modify their behavior. Common flags include:
+  -r: Recursive (applies to a directory and its contents).
+  -v: Verbose (provides more detailed information).
+  -f: Force (overrides warnings or errors).
+  -h: Help (displays information about the command usage).
 
-relative path where is it from me
-/Folder1/Folder2
+- `ls`: List the contents of a directory.
+  Syntax: ls [options] [directory]
+  Options:
+    -l: Long format (displays detailed information about each file).
+    -a: All (includes hidden files).
+    -t: Sort by modification time (newest first).
 
-absolute path where is it from root
-C:\users\username\Documents\myfile.txt
-https://www.mysite.com/myfolder/subfolder/sub/sub2page1.html
+- `cd`: Change the current working directory. (/ root, ~ home)
+  Syntax: cd [directory]
+  Options:
+    -L: Follow symbolic links.
+    -P: Do not follow symbolic links.
 
-touch - create file
-touch emptyfile.txt
+- Paths: Two types of paths in bash:
+  - Relative path: Specifies a location relative to the current working directory.
+  - Absolute path: Specifies a location starting from the root directory.
 
-nano makes file/opens editor in linux
-cat- prints changes in nano
+- `touch`: Create a new empty file or update the modification time of an existing file.
+  Syntax: touch [file(s)]
 
-mkdir new file
-cp copy contents of file into another file
+- `nano`: A text editor for the terminal.
+  Syntax: nano [file]
+  Common commands:
+    -Ctrl+O: Save changes.
+    -Ctrl+X: Exit nano.
+    -Ctrl+W: Search for a word or phrase.
 
-r - recursive, everything in folder
-rsync synchronise files
-mv move files
-move file several files down ex mv myfile.txt/../../exfile.txt
-you can rename files too
-my_file2.txt
+- `mkdir`: Make a new directory.
+  Syntax: mkdir [directory]
+  Options:
+    -p: Create parent directories as needed.
 
-rm- remove files - no check so be careful (rm-rf deletes everything)
+- `rm`: Remove files or directories.
+  Syntax: rm [options] [file(s)/directory(ies)]
+  Options:
+    -r: Remove the contents of a directory recursively.
+    -rf: Force removal without prompting for confirmation, including the contents of a directory. Use with caution as it will ignore write-protected files.
+
+ #### Other commands/notes
 man ls
+
 man -k change (keyword) brings up  docs with keyword in it
+
 grep test find where keywords are in files
+
 grep test * -R recursive search
-wildcards are used to match multiple filenames or pattern of characters, such as * (matches any number of characters) or ? (matches exactly one character). They are used in bash commands, such as ls or rm, to operate on multiple files at once.
+
+wildcards are used to match multiple filenames or pattern of characters, such as * (matches any number of characters) or ? (matches exactly one character). 
+
+They are used in bash commands, such as ls or rm, to operate on multiple files at once.
+uname - OS system
 
 VM terminal is not colourful unlike PC
 
+
+### Linux Permissions
+
+In Linux, every file and directory has permissions that determine who can access and perform actions on them.
+
+Types of permissions:
+- Read (r): Permission to read the contents of a file or list the files in a directory.
+- Write (w): Permission to modify the contents of a file or add/remove files in a directory.
+- Execute (x): Permission to execute a file or access files in a directory.
+
+Users:
+- Owner: The user who owns the file or directory.
+- Group: A group of users who have common access privileges.
+- Others: All other users on the system.
+
+Permission representation:
+- A series of 9 characters in the format: rwxrwxrwx
+  - The first three characters represent the owner's permissions.
+  - The next three characters represent the group's permissions.
+  - The last three characters represent the permissions for others.
+- If a permission is not set, a '-' is used instead of 'rwx'.
+
+Setting permissions:
+- Use the `chmod` command to change the permissions.
+  - Numeric mode uses a 3-digit octal number to represent the permissions.
+  - Symbolic mode uses letters and operators to represent the permissions.
+
+Examples:
+- Give owner read and write, others only read:
+  chmod 644 file.txt
+- Give owner full, others execute:
+  chmod 711 directory/
+- Add execute for owner and group:
+  chmod u+x,g+x file.sh
+
+  ### Other notes
+top (table of processes) lets you see how processes are running in real time.
+
+sleep creates dummy processes. Number signifies time delay before it runs.
+
+kill stops process. kill -9 kills it very quickly
+
+& runs process in the background and lets you use the terminal
+
+ctrl+z stops process
+
+fg brings back to the foreground
+
+tree- allows you to showcasefiles and folders
+
+(sudo apt install tree -y)
+
+gem install bundler
+
+bundle
+
+rake spec - tests against dev env 
