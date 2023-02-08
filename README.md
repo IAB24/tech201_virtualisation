@@ -36,7 +36,7 @@ Monoliths - not flexible/or robust
 Highlights risks in system. Outlines potential damages, chance of occurence and risk to business. 
 
 
-## Development environments
+### Development environments
 - Space with all the tools and configurations to run and test programs.
 
 - Increases dev team collaboration.
@@ -52,6 +52,8 @@ or app1 conflicts with a program app2 needs.
 
 - Virtualisation allows you to set up a dev environment equal for everyone using VMs.
 
+### Tooling/settings
+
 How to set up ruby:
 https://rubyinstaller.org/downloads/
 
@@ -61,12 +63,10 @@ https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
 How to set up vagrant:
 https://www.vagrantup.com/
 
-$ vagrant init ubuntu/xenia164
-- initialise new config file in this folder
-
 Windows hypervisor on
 
 
+### Vagrant
 Create a directory for your project and navigate to it in the terminal.
 
 Initialize the project with a specific base image by running the command vagrant init ubuntu/xenial64. This will create a Vagrantfile in the directory, which is used to configure your virtual environment.
