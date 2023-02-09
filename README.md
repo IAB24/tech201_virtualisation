@@ -267,6 +267,8 @@ rake spec - tests against de v env
 
 - Create a file called `provision.sh`
 
+- Add `#!/bin/bash` to start with to let you know that it is a bash script
+
 - Enter these instructions  for downloading node.js
 ![img.png](img.png)
 
