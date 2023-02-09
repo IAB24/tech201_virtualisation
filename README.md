@@ -263,4 +263,23 @@ rake spec - tests against de v env
 - Run `node app.js` where it should return "Your app is ready and listening on port 3000" on the terminal
 - Go to browser and type in "http://192.168.10.100:3000/" where you see the app is running
 
+### Provisioning
+
+- Create a file called `provision.sh`
+
+- Enter these instructions  for downloading node.js
+![img.png](img.png)
+
+- Next you need to add the provision line to your vagrant folder.
+![img_1.png](img_1.png)
+
+- Enter `vagrant up` in the terminal and the app should be complete.
+![img_2.png](img_2.png)
+
+
+
+
+
+reverse proxy shows app by default instead of welcome to nginx
+
 
