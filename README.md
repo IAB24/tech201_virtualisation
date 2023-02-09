@@ -240,27 +240,27 @@ rake spec - tests against de v env
 
 ### Sparta App
 
-- First you need to 'cd' into environment in VS code
-- Then 'cd' into spec-test
-- Then 'ls' where you should see a number of files
-- Run 'gem install bundler' ruby testing framework
-- Run 'bundle' 
-- run 'rake spec' this tests your environment
-- run 'sudo apt - get update -y'
-- then run 'sudo apt-get upgrade'
-- Following this you need to run 'sudo apt-get install nginx -y'
-- Run 'sudo systemctl enable nginx -y'
-- Run 'sudo systemctl start nginx -y'
-- Do another 'rake spec and you will see that there are now only three failures
-- Run 'sudo apt-get install python-software-properties'
-- You need a certain version of nodejs so you need to input 'curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -'
-- Now run 'sudo apt get install nodejs -y' for nodejs and jus check that with nodejs -v and if we now do a rake spec there will only be one failure left.
-- We can now install 'sudo apt-get install nodejs -y'
-- Check version with 'nodejs -v'
-- If we now do a 'rake spec' there will only be one failure left
--  Now run 'sudo npm install pm2 -g' to remove that last failure
-- Now run 'cd app' twice then run 'npm install' to install sparta app
-- Run 'node app.js' where it should return "Your app is ready and listening on port 3000" on the terminal
+- First you need to `cd` into environment in VS code
+- Then `cd` into spec-test
+- Then `ls` where you should see a number of files
+- Run `gem install bundler` ruby testing framework
+- Run `bundle` 
+- run `rake spec` this tests your environment
+- run `sudo apt - get update -y`
+- then run `sudo apt-get upgrade`
+- Following this you need to run `sudo apt-get install nginx -y`
+- Run `sudo systemctl enable nginx -y`
+- Run `sudo systemctl start nginx -y`
+- Do another `rake spec` and you will see that there are now only three failures
+- Run `sudo apt-get install python-software-properties`
+- You need a certain version of nodejs so you need to input `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+- Now run `sudo apt get install nodejs -y` for nodejs and jus check that with `nodejs -v` and if we now do a rake spec there will only be one failure left.
+- We can now install `sudo apt-get install nodejs -y`
+- Check version with `nodejs -v`
+- If we now do a `rake spec` there will only be one failure left
+-  Now run `sudo npm install pm2 -g` to remove that last failure
+- Now run `cd app` twice then run `npm install` to install sparta app
+- Run `node app.js` where it should return "Your app is ready and listening on port 3000" on the terminal
 - Go to browser and type in "http://192.168.10.100:3000/" where you see the app is running
 
 
