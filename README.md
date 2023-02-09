@@ -269,7 +269,16 @@ rake spec - tests against de v env
 
 - Add `#!/bin/bash` to start with to let you know that it is a bash script
 
-- Enter these instructions  for downloading node.js
+- We need to add updates and upgrades so enter `sudo apt-get update -y`
+ and `sudo apt-get upgrade -y`
+ - Next install nginx by using this input `sudo apt-get install nginx -y`
+ - Ensure that nginx is enabled by running `sudo systemctl enable nginx -y`
+- For downloading node.js run the following `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -sudo apt-get install nodejs -y`
+- Now we need to install pmw and that is achieved by entering `sudo npm install pm2 -gnpm install`
+
+- Ensure that you are in the right folder so `cd` into app
+- Install node.js by running `node app.js`
+- The full picture
 ![img.png](img.png)
 
 - Next you need to add the provision line to your vagrant folder.
