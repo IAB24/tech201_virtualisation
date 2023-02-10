@@ -294,3 +294,33 @@ rake spec - tests against de v env
 reverse proxy shows app by default instead of welcome to nginx
 
 
+- destroy vms
+- 2 different ip addresses
+- vagrant up - create 2 vms
+- app takes longer because it's running provisions
+- ssh into app and database
+- enter key/ mongodb
+- apt get update/upgrade for database
+- install mongodb
+- change bindIp
+- restart/enable mongodb
+- status active
+
+- cd into app
+- environment variable - dynamically specified variable
+- MY_VAR = "name of variable"
+- contents echo 
+- normal variable only accessible in bash. doesn't exist in vs code. environment variable accessible everywhere.
+- export MY_VAR = "x" is how u make env var
+- persistent env variable stays there after vm shut down
+- bash.rc 
+- source
+- printenv
+- env variable needed on app to specify how to connect  to database.
+
+- export DB_HOST=mongodb://192.167.10.150:27017//posts
+- printenv DB_HOST 
+- cd app
+- npm install
+- node seeds/seed.js
+![img_3.png](img_3.png)
