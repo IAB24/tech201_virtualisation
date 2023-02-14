@@ -324,3 +324,79 @@ reverse proxy shows app by default instead of welcome to nginx
 - npm install
 - node seeds/seed.js
 ![img_3.png](img_3.png)
+- 
+
+## Automating Multi-Machine Vagrant
+
+- Create a new directory that has the app and database files inside as well as the provisioning files.
+![img_6.png](img_6.png)
+
+
+### Provisioning app
+```linux
+#!/bin/bash
+
+# Update the sources list
+sudo apt-get update -y
+
+# upgrade any packages available
+sudo apt-get upgrade -y
+
+
+# install git
+sudo apt-get install git -y
+
+# install nodejs
+sudo apt-get install python-software-properties -y
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install nodejs -y
+
+# install pm2
+sudo npm install pm2 -g
+
+sudo apt-get install nginx -y
+
+# remove the old file and add our one
+sudo rm /etc/nginx/sites-available/default
+sudo cp /home/ubuntu/environment/nginx.default /etc/nginx/sites-available/default
+
+# finally, restart the nginx service so the new config takes hold
+sudo service nginx restart
+```
+![img_8.png](img_8.png)
+![img_7.png](img_7.png)
+
+### Provisioning database 
+```bash
+# be careful of these keys, they will go out of date
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv D68FA50FEA312927
+echo "deb https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+
+sudo apt-get update -y
+sudo apt-get upgrade -y
+
+# sudo apt-get install mongodb-org=3.2.20 -y
+sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org-shell=3.2.20 mongodb-org-mongos=3.2.20 mongodb-org-tools=3.2.20
+
+# remove the default .conf and replace with our configuration
+sudo rm /etc/mongod.conf
+sudo ln -s /home/vagrant/environment/db/mongod.conf /etc/mongod.conf
+
+# if mongo is is set up correctly these will be successful
+sudo systemctl restart mongod
+sudo systemctl enable mongod
+```
+-
+![img_5.png](img_5.png)
+
+- To start the app you need to run both VMs with `vagrant up`
+- Open Gitbash terminal on administrator mode and `vagrant ssh app`
+-  `cd app`  to make sure you are in the correct directory.
+- `npm install` to install the app
+- `node seeds/seed.js` to seed database
+- `node app.js` to start app
+- When you enter `192.168.10.100:3000` and `192.168.10.100:3000/posts` you should see the app running.
+![img_10.png](img_10.png)
+![img_9.png](img_9.png)
+
+
