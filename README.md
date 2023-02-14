@@ -328,12 +328,14 @@ reverse proxy shows app by default instead of welcome to nginx
 
 ## Automating Multi-Machine Vagrant
 
-- Create a new directory that has the app and database files inside as well as the provisioning files.
+Create a new directory that has the app and database files inside as well as the provisioning files.
 
 ![img_6.png](img_6.png)
 
 
-### Provisioning app
+### Provisioning app 
+Write this code in the app provision file `app.sh`
+
 ```linux
 #!/bin/bash
 
@@ -368,6 +370,8 @@ sudo service nginx restart
 ![img_7.png](img_7.png)
 
 ### Provisioning database 
+
+Copy this code into the database provision file `database.sh`
 ```bash
 # be careful of these keys, they will go out of date
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv D68FA50FEA312927
