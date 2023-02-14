@@ -329,6 +329,7 @@ reverse proxy shows app by default instead of welcome to nginx
 ## Automating Multi-Machine Vagrant
 
 - Create a new directory that has the app and database files inside as well as the provisioning files.
+
 ![img_6.png](img_6.png)
 
 
@@ -363,7 +364,7 @@ sudo cp /home/ubuntu/environment/nginx.default /etc/nginx/sites-available/defaul
 # finally, restart the nginx service so the new config takes hold
 sudo service nginx restart
 ```
-![img_8.png](img_8.png)
+
 ![img_7.png](img_7.png)
 
 ### Provisioning database 
